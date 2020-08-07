@@ -1,4 +1,9 @@
-<div align="center" style="color:#8257E5">
+<div align="center" 
+   style="background-color: #8257E5;
+          height: 100px;
+          display: flex; 
+          justify-content: center; 
+          align-items: center;">
     <img src="frontend/images/logo.svg" alt="Proffy" width="220px">
 </div>
 
