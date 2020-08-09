@@ -38,12 +38,15 @@
    box-sizing: border-box;
 }
 
-html, body div.container {
+html, body {
    height: 100vh;
 }
 
 body {
    background-color: var(--color-background);
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 body, input, button, textarea {
@@ -51,13 +54,7 @@ body, input, button, textarea {
    color: var(--color-text-base);
 }
 
-.container {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-
-.content {
+#container {
    width: 90vw;
    max-width: 700px;
 }
