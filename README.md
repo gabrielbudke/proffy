@@ -4,14 +4,14 @@
           display: flex; 
           justify-content: center; 
           align-items: center;">
-    <img src="frontend/images/logo.svg" alt="Proffy" width="220px">
+    <img src=".github/logo.svg" alt="Proffy" width="100%">
 </div>
 
 <h3 align="center">
   :rocket: Next Level Week #2
 </h3>
 <h4 align="center">
-   Trilha: Discovery
+   Trilha: Discovery :earth_americas: 
 </h4>
 
 <p align="center" >  
@@ -24,6 +24,13 @@
   </a>
 </p>
 
+<p align="center">
+  <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; 
+  <a href="#thinking-como-contribuir">Como contribuir</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#fire-desafios">Desafios</a>
+</p>
+
+
 ## :rocket: Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
@@ -32,11 +39,11 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [SQLite](https://www.sqlite.org/)
 - [sqlite-async](https://www.npmjs.com/package/sqlite-async)
 
-## Projeto
+## :computer: Projeto
 
 O Proffy é um projeto que visa conectar professores dispostos a ensinar e alunos ansiosos por aprender.
 
-## 🤔 Como contribuir
+## :thinking: Como contribuir
 
 - Faça um fork desse repositório;
 - Cria uma branch com a sua feature: `git checkout -b minha-feature`;
@@ -45,12 +52,12 @@ O Proffy é um projeto que visa conectar professores dispostos a ensinar e aluno
 
 Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
 
-### Desafios
+### :fire: Desafios
 
 #### Desafio #01
 
 Mostrar página de sucesso após cadastro de proffy.
-OBS> Aguardar 2 segundos na página e redirecionar para a listagem dos proffus, com filtro
+OBS: Aguardar 2 segundos na página e redirecionar para a listagem dos proffus, com filtro
 
 ---
 
