@@ -47,9 +47,9 @@ O Proffy é um projeto que visa conectar professores dispostos a ensinar e aluno
 
 Depois que o merge da sua pull request for feito, você pode deletar a sua branch.
 
-### :fire: Desafios
+## :fire: Desafios
 
-#### Desafio #01
+### Desafio #01
 
 Mostrar página de sucesso após cadastro de proffy.
 OBS: Aguardar 2 segundos na página e redirecionar para a listagem dos proffus, com filtro
