@@ -19,7 +19,7 @@ async function pageStudy(request, response) {
       SELECT classes.*,
              proffys.*
         FROM proffys
-        JOIN classes ON (classes.proffys.id = proffys.id)
+        JOIN classes ON (classes.proffy_id = proffys.id)
        WHERE EXISTS (
           SELECT class_schedule.*
             FROM class_schedule        
@@ -34,6 +34,10 @@ async function pageStudy(request, response) {
       const db = await database;
       const proffys = await db.all(query);
 
+      proffys.map(proffy => {
+         proffy.subject = getSubject(proffy.subject);
+      });
+
       return response.render('study.html', { proffys, filters, subjects, weekdays });
    } catch (error) {
       console.log(error);
@@ -41,21 +45,50 @@ async function pageStudy(request, response) {
 
 }
 
-function pageGiveClasses() {
-   const data = request.query;
-   
-   const isNotEmpty = Object.keys(data).length > 0;
-
-   if(isNotEmpty) {
-
-      data.subject = getSubject(data.subject);
-      
-      proffys.push(data);
-
-      return response.redirect('/study');
-   }
+function pageGiveClasses(request, response) {
 
    return response.render('give-classes.html', { subjects, weekdays });
 }
 
-module.exports = { pageLanding, pageStudy, pageGiveClasses }
+async function saveClasses(request, response) {
+   const createProffy = require('./database/createProffy');
+   
+   const {
+      name, 
+      avatar, 
+      whatsapp, 
+      bio,
+      subject,
+      cost,
+      weekday,
+      time_from,
+      time_to,
+   } = request.body;
+
+   const proffyValue = { name, avatar, whatsapp, bio };
+   const classValue = { subject, cost };
+   const classScheduleValues = weekday.map((weekday, index) => {
+      return {
+         weekday,
+         time_from: convertHoursToMinute(time_from[index]),
+         time_to: convertHoursToMinute(time_to[index])
+      }
+   });
+
+   try {      
+      const db = await database;
+      await createProffy(db, { proffyValue, classValue, classScheduleValues });
+
+      let queryString = "?subject=" + subject;
+      queryString += "&weekday=" + weekday[0];
+      queryString += "&time=" + time_from[0];
+      
+      return response.redirect('/study' + queryString);
+   } catch (error) {
+      console.log(error);
+   }
+
+}
+
+
+module.exports = { pageLanding, pageStudy, pageGiveClasses, saveClasses }
