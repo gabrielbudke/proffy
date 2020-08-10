@@ -8,7 +8,7 @@
    width: 100vw;
    height: 100vh;
 }
-
+/*
 .page-header {
    background: var(--color-primary);
 
@@ -53,6 +53,7 @@
    line-height: 4.2rem;
    color: var(--color-title-in-primary);
 }
+*/
 
 #search-teachers {
    margin-top: 3.2rem;
@@ -87,7 +88,7 @@
 #search-teachers button:hover {
   background-color: var(--color-secondary-dark);
 }
-
+/* 
 .select-block label,
 .input-block input {
    font-size: 1.4rem;
@@ -121,7 +122,7 @@
    position: absolute;
    left: 1.6rem;
    bottom: 0px;
-}
+} */
 
 .container .content main {
    margin: 3.2rem auto;
@@ -192,7 +193,7 @@
    display: block;
 }
 
-.teacher-item footer button {
+.teacher-item footer .button {
    width: 20rem;
    height: 5.6rem;
    background: var(--color-secondary);
