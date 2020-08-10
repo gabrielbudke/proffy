@@ -19,8 +19,6 @@
   <a href="https://gitpod.io/#https://github.com/gabrielbudke/proffy"> 
    <img alt="Gitpod ready to code" src="https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod">
   </a>
-  
-  <!--  [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/gabrielbudke/proffy) -->
 </p>
 
 Projeto desenvolvido durante a Next Level Week #02 da Rocketseat
