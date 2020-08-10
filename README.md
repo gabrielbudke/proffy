@@ -1,10 +1,5 @@
-<div align="center" 
-   style="background-color: #8257E5;
-          height: 100px;
-          display: flex; 
-          justify-content: center; 
-          align-items: center;">
-    <img src=".github/logo.svg" alt="Proffy" width="100%">
+<div align="center">
+    <img src=".github/logo.svg" alt="Proffy" width="250px">
 </div>
 
 <h3 align="center">
