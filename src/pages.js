@@ -46,7 +46,6 @@ async function pageStudy(request, response) {
 }
 
 function pageGiveClasses(request, response) {
-
    return response.render('give-classes.html', { subjects, weekdays });
 }
 
@@ -77,18 +76,23 @@ async function saveClasses(request, response) {
 
    try {      
       const db = await database;
+      
       await createProffy(db, { proffyValue, classValue, classScheduleValues });
 
       let queryString = "?subject=" + subject;
       queryString += "&weekday=" + weekday[0];
-      queryString += "&time=" + time_from[0];
-      
-      return response.redirect('/study' + queryString);
+      queryString += "&time=" + time_from[0];      
+                  
+      return response.redirect('/success' + queryString);          
+
    } catch (error) {
       console.log(error);
    }
 
 }
 
+function pageSucess(request, response) {        
+   return response.render('success.html');
+};
 
-module.exports = { pageLanding, pageStudy, pageGiveClasses, saveClasses }
+module.exports = { pageLanding, pageStudy, pageGiveClasses, saveClasses, pageSucess }

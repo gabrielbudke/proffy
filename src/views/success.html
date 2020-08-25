@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="images/favicon.png" type="image/png">
+   <title>Proffy | Sua plataforma de estudos online</title>
+   
+   <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet">
+   
+   <link rel="stylesheet" href="styles/main.css">
+   <link rel="stylesheet" href="styles/partials/success.css">
+</head>
+<body>
+   <div class="container">
+      <div class="content">
+
+         <div class="success-log">
+            <img src="images/icons/success-check-icon.svg" alt="Cadastrado com sucesso">
+            <h1>Cadastrado com sucesso!</h1>         
+         </div>
+      </div>
+   </div>   
+
+
+   <script>    
+      const baseUrl = window.location.origin;
+      const query = window.location.search;
+            
+      setTimeout(function() {
+         window.location.href = `${baseUrl}/study${query}`;
+      }, 2000);
+
+   </script>
+</body>
+</html>
